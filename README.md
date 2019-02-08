@@ -1,4 +1,4 @@
-# Standard Go Project Layout
+# Эталонная структура калатогов проекта на языке GO
 
 This is a basic layout for Go application projects. It's not an official standard defined by the core Go dev team; however, it is a set of common historical and emerging project layout patterns in the Go ecosystem. Some of these patterns are more popular than others. It also has a number of small enhancements along with several supporting directories common to any large enough real world application.
 
@@ -22,7 +22,7 @@ More about naming and organizing packages as well as other code structure recomm
 * [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
 * [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
-## Go Directories
+## Каталоги Go
 
 ### `/cmd`
 
@@ -56,7 +56,7 @@ Application dependencies (managed manually or by your favorite dependency manage
 
 Don't commit your application dependencies if you are building a library.
 
-## Service Application Directories
+## Каталоки служб приложения (сервисов)
 
 ### `/api`
 
@@ -64,13 +64,13 @@ OpenAPI/Swagger specs, JSON schema files, protocol definition files.
 
 See the [`/api`](api/README.md) directory for examples.
 
-## Web Application Directories
+## Каталоги веб-приложения
 
 ### `/web`
 
 Web application specific components: static web assets, server side templates and SPAs.
 
-## Common Application Directories
+## Типичные каталоги приложения
 
 ### `/configs`
 
@@ -108,7 +108,7 @@ Additional external test apps and test data. Feel free to structure the `/test` 
 
 See the [`/test`](test/README.md) directory for examples.
 
-## Other Directories
+## Прочие каталоги
 
 ### `/docs`
 
@@ -134,7 +134,7 @@ External helper tools, forked code and other 3rd party utilities (e.g., Swagger 
 
 ### `/githooks`
 
-Git hooks.
+хуки для Git.
 
 ### `/assets`
 
@@ -146,7 +146,7 @@ This is the place to put your project's website data if you are not using Github
 
 See the [`/website`](website/README.md) directory for examples.
 
-## Directories You Shouldn't Have
+## Каталоги, которые вам следует исключить
 
 ### `/src`
 
@@ -155,7 +155,7 @@ Some Go projects do have a `src` folder, but it usually happens when the devs ca
 Don't confuse the project level `/src` directory with the `/src` directory Go uses for its workspaces as described in [`How to Write Go Code`](https://golang.org/doc/code.html). The `$GOPATH` environment variable points to your (current) workspace (by default it points to `$HOME/go` on non-windows systems). This workspace includes the top level `/pkg`, `/bin` and `/src` directories. Your actual project ends up being a sub-directory under `/src`, so if you have the `/src` directory in your project the project path will look like this: `/some/path/to/workspace/src/your_project/src/your_code.go`. Note that with Go 1.11 it's possible to have your project outside of your `GOPATH`, but it still doesn't mean it's a good idea to use this layout pattern.
 
 
-## Badges
+## Значки
 
 * [Go Report Card](https://goreportcard.com/) - It will scan your code with `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` and `misspell`. Replace `github.com/golang-standards/project-layout` with your project reference.
 
@@ -167,7 +167,7 @@ Don't confuse the project level `/src` directory with the `/src` directory Go us
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
-## Notes
+## Примечание
 
 A more opinionated project template with sample/reusable configs, scripts and code is a WIP.
 
