@@ -56,7 +56,7 @@ Application dependencies (managed manually or by your favorite dependency manage
 
 Don't commit your application dependencies if you are building a library.
 
-## Каталоки служб приложения (сервисов)
+## Каталоги служб приложения (сервисов)
 
 ### `/api`
 
